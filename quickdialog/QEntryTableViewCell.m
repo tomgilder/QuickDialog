@@ -152,6 +152,24 @@
     _textField.textAlignment = UITextAlignmentLeft;
 }
 
+- (void)updateTextFieldHighlighted:(BOOL)highlighted {
+    if (highlighted) {
+        self.textField.textColor = self.textLabel.highlightedTextColor;
+    } else {
+        self.textField.textColor = self.textLabel.textColor;
+    }
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [self updateTextFieldHighlighted:highlighted];
+    [super setHighlighted:highlighted animated:animated];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [self updateTextFieldHighlighted:selected];
+    [super setSelected:selected animated:animated];
+}
+
 - (void)textFieldEditingChanged:(UITextField *)textFieldEditingChanged {
    _entryElement.textValue = _textField.text;
     
