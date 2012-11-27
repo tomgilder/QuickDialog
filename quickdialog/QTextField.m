@@ -17,6 +17,21 @@
 
 @synthesize prefix = _prefix;
 @synthesize suffix = _suffix;
+@synthesize highlighted = _highlighted;
+@synthesize highlightedTextColor = _highlightedTextColor;
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        self.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1.0];
+        self.highlightedTextColor = [UIColor whiteColor];
+        self.font = [UIFont systemFontOfSize:17];
+    }
+    
+    return self;
+}
 
 - (void)drawTextInRect:(CGRect)rect
 {
@@ -27,6 +42,27 @@
     } else {
         [super drawTextInRect:rect];
     }
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    // if label is not highlighted, and
+
+    if (highlighted)
+    {
+        if (!_highlighted)
+        {
+            _defaultTextColor = self.textColor;
+        }
+        
+        self.textColor = self.highlightedTextColor;
+    }
+    else if (_defaultTextColor != nil)
+    {
+        self.textColor = _defaultTextColor;
+    }
+    
+    _highlighted = highlighted;
 }
 
 @end

@@ -1,4 +1,4 @@
-//                                
+//
 // Copyright 2011 ESCOZ Inc  - http://escoz.com
 // 
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not use this 
@@ -152,22 +152,9 @@
     _textField.textAlignment = UITextAlignmentLeft;
 }
 
-- (void)updateTextFieldHighlighted:(BOOL)highlighted {
-    if (highlighted) {
-        self.textField.textColor = self.textLabel.highlightedTextColor;
-    } else {
-        self.textField.textColor = self.textLabel.textColor;
-    }
-}
-
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
-    [self updateTextFieldHighlighted:highlighted];
     [super setHighlighted:highlighted animated:animated];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [self updateTextFieldHighlighted:selected];
-    [super setSelected:selected animated:animated];
+    _textField.highlighted = highlighted;
 }
 
 - (void)textFieldEditingChanged:(UITextField *)textFieldEditingChanged {

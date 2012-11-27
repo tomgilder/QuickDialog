@@ -16,8 +16,13 @@
 #import <UIKit/UIKit.h>
 
 @interface QTextField : UITextField
+{
+    UIColor *_defaultTextColor;
+}
 
 @property (nonatomic, copy) NSString *prefix;
 @property (nonatomic, copy) NSString *suffix;
+@property (nonatomic, strong) UIColor *highlightedTextColor;
+@property (nonatomic) BOOL highlighted;
 
 @end
