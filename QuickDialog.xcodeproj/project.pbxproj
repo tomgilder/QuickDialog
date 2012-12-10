@@ -148,6 +148,8 @@
 		D8F180E813F0599A009B0CD0 /* jsonremote.json in Resources */ = {isa = PBXBuildFile; fileRef = D8F180E813F0599A009B0CCF /* jsonremote.json */; };
 		D8F180E813F0599A009B0CD2 /* QuickDialogWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F180E813F0599A009B0CD1 /* QuickDialogWebController.m */; };
 		D8F180E813F0599A009B0CD4 /* QuickDialogWebController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F180E813F0599A009B0CD3 /* QuickDialogWebController.h */; };
+		E2274E4C166BE76200EE8159 /* QLabelTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E2274E4A166BE76200EE8159 /* QLabelTableViewCell.h */; };
+		E2274E4E166BE76200EE8159 /* QLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2274E4B166BE76200EE8159 /* QLabelTableViewCell.m */; };
 		F209CEE41536AB100043F61C /* PeriodPickerValueParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F209CEE31536AB100043F61C /* PeriodPickerValueParser.m */; };
 		F2304357156CDFDD006D0A56 /* QTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = F2304355156CDFDD006D0A56 /* QTextField.h */; };
 		F2304358156CDFDD006D0A56 /* QTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F2304356156CDFDD006D0A56 /* QTextField.m */; };
@@ -330,6 +332,8 @@
 		D8F180E813F0599A009B0CCF /* jsonremote.json */ = {isa = PBXFileReference; lastKnownFileType = file.json; name = jsonremote.json; path = sample/Resources/jsonremote.json; sourceTree = SOURCE_ROOT; };
 		D8F180E813F0599A009B0CD1 /* QuickDialogWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuickDialogWebController.m; path = quickdialog/QuickDialogWebController.m; sourceTree = SOURCE_ROOT; };
 		D8F180E813F0599A009B0CD3 /* QuickDialogWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuickDialogWebController.h; path = quickdialog/QuickDialogWebController.h; sourceTree = SOURCE_ROOT; };
+		E2274E4A166BE76200EE8159 /* QLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLabelTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		E2274E4B166BE76200EE8159 /* QLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLabelTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		F209CEE21536AB100043F61C /* PeriodPickerValueParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeriodPickerValueParser.h; path = sample/PeriodPickerValueParser.h; sourceTree = SOURCE_ROOT; };
 		F209CEE31536AB100043F61C /* PeriodPickerValueParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeriodPickerValueParser.m; path = sample/PeriodPickerValueParser.m; sourceTree = SOURCE_ROOT; };
 		F2304355156CDFDD006D0A56 /* QTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QTextField.h; path = quickdialog/QTextField.h; sourceTree = SOURCE_ROOT; };
@@ -605,6 +609,8 @@
 				194C3FC114EDF0510036C9E7 /* DOAutocompleteTextField.m */,
 				5C50EBF53D28B761CBA809FF /* QuickDialogController+Animations.m */,
 				5C50E22D2B906D69252BE7B4 /* QuickDialogController+Animations.h */,
+				E2274E4A166BE76200EE8159 /* QLabelTableViewCell.h */,
+				E2274E4B166BE76200EE8159 /* QLabelTableViewCell.m */,
 			);
 			name = quickdialog;
 			path = quickform;
@@ -705,6 +711,7 @@
 				F2304357156CDFDD006D0A56 /* QTextField.h in Headers */,
 				D8E0748E165A7D08004E7035 /* QuickDialogController+Navigation.h in Headers */,
 				5C50E6D6FE14BF78231F9671 /* QuickDialogController+Animations.h in Headers */,
+				E2274E4C166BE76200EE8159 /* QLabelTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +872,7 @@
 				F2304358156CDFDD006D0A56 /* QTextField.m in Sources */,
 				D8E0748F165A7D08004E7035 /* QuickDialogController+Navigation.m in Sources */,
 				5C50E215ECB7C7D4B503AA4C /* QuickDialogController+Animations.m in Sources */,
+				E2274E4E166BE76200EE8159 /* QLabelTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

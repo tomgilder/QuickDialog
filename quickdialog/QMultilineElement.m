@@ -12,18 +12,20 @@
 // permissions and limitations under the License.
 //
 
+#import "QLabelTableViewCell.h"
+
 @implementation QMultilineElement
 
 @synthesize delegate = _delegate;
 
 
-- (QEntryElement *)init {
+- (QElement *)init {
     self = [super init];
     if (self) {
         self.presentationMode = QPresentationModePopover;
     }
 
-    return self;
+    return self;    
 }
 
 - (QMultilineElement *)initWithTitle:(NSString *)title value:(NSString *)text
@@ -35,11 +37,17 @@
     return self;
 }
 
-- (UITableViewCell *)getCellForTableView:(QuickDialogTableView *)tableView controller:(QuickDialogController *)controller {
-    QEntryTableViewCell *cell = (QEntryTableViewCell *) [super getCellForTableView:tableView controller:controller];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-    cell.textField.enabled = NO;
+- (UITableViewCell *)getCellForTableView:(QuickDialogTableView *)tableView controller:(QuickDialogController *)controller
+{
+    QLabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[QLabelTableViewCell reuseIdentifier]];
+    
+    if (cell == nil) {
+        cell = [[QLabelTableViewCell alloc] init];
+    }
+    
+    cell.textLabel.text = self.title;
+    cell.valueLabel.text = self.textValue;
+    [cell layoutIfNeeded];
     return cell;
 }
 
