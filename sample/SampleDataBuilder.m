@@ -160,6 +160,9 @@
     QEntryElement *entryElement = [[QEntryElement alloc] initWithTitle:@"Entry Element" Value:nil Placeholder:@"type here"];
 	entryElement.key = @"entry1";
 
+    QMultilineElement *multilineElement = [[QMultilineElement alloc] initWithTitle:@"Multiline Element" Value:@"hello" Placeholder:@"type here"];
+	multilineElement.key = @"multilineentry1";
+
     NSArray *values = [NSArray arrayWithObjects:@"Ferrari", @"Ms.",@"Mrs.",@"Miss",@"Mr.",@"Prof.",@"A/Prof.",nil];
     QAutoEntryElement *autoElement = [[QAutoEntryElement alloc] initWithTitle:@"AutoComplete" value:nil placeholder:@"type letter M"];
     autoElement.autoCompleteValues = values;
@@ -168,6 +171,7 @@
 
     controls.footer = @"More controls will be added.";
     [controls addElement:element1];
+    [controls addElement:multilineElement];
 
     [controls addElement:radioElement];
     [controls addElement:entryElement];
